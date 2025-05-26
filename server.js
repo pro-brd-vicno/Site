@@ -20,8 +20,8 @@ app.options('*', cors(corsOptions));
 
 app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.send('Server is running!');
+app.get('/ping', (req, res) => {
+  res.send('pong');
 });
 
 const TOKEN = process.env.TELEGRAM_BOT_TOKEN;
