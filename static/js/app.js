@@ -162,6 +162,8 @@ $(document).ready(function () {
       }
 
       if (isValid) {
+        alert("Зберігаємо ваші дані");
+          
         const data = {
           name: name,
           phone: phone,
@@ -170,7 +172,7 @@ $(document).ready(function () {
         };
 
         try {
-          const response = await fetch("/send", {
+          const response = await fetch("https://provicno-service.onrender.com/api/send", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data),
@@ -178,13 +180,17 @@ $(document).ready(function () {
 
           if (response.ok) {
             alert("✅ Заявка надіслана!");
-            form[0].reset();
+            form.reset();
           } else {
-            alert("❌ Сталася помилка при надсиланні.");
+            alert("Ваші дані не вдалося зберегти");
+            const telegramLink = `https://t.me/jullrydyak`;
+            window.location.href = telegramLink;
           }
         } catch (error) {
           console.error(error);
-          alert("❌ Не вдалося звʼязатися з сервером.");
+          alert("Сталася помилка при підключенні до сервера.");
+          const telegramLink = `https://t.me/jullrydyak`;
+          window.location.href = telegramLink;
         }
       }
     });
