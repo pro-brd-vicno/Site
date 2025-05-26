@@ -89,9 +89,6 @@
             border: 1px solid #b5ace9;
             &::placeholder {
                 font-size: 16px;
-                @media screen and (max-width: $sm) {
-                    font-size: 14px;
-                }
             }
 
             &:focus-visible {

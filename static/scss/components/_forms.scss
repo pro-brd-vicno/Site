@@ -104,13 +104,6 @@
                 width: 100%;
                 @media screen and (max-width: $sm) {
                     height: 45px;
-                    font-size: 14px;
-                }
-
-                &::placeholder {
-                    @media screen and (max-width: $sm) {
-                        font-size: 14px;
-                    }
                 }
 
                 &:focus-visible {
