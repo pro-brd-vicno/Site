@@ -1,22 +1,33 @@
 import express from 'express';
-import fetch from 'node-fetch';
+import cors from 'cors';
+import axios from 'axios';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const corsOptions = {
+  origin: 'https://www.provicno.com',
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type'],
+  credentials: true,
+};
 
+app.use(cors(corsOptions));
 
-const TOKEN = '8089972530:AAGEOXLz0dhspq5pPeKxZy-pwanAkyC0u7c';
-const CHAT_ID = '-1002639424673';
+app.options('*', cors(corsOptions));
 
-app.use(express.static(__dirname));
 app.use(express.json());
 
-app.post('/send', async (req, res) => {
+app.get('/', (req, res) => {
+  res.send('Server is running!');
+});
+
+const TOKEN = process.env.TELEGRAM_BOT_TOKEN;
+const CHAT_ID =  process.env.TELEGRAM_CHAT_ID;
+
+app.post('/api/send', async (req, res) => {
   const { name, phone, service, formType } = req.body;
 
   let formLabel = "Заявка";
@@ -29,23 +40,19 @@ app.post('/send', async (req, res) => {
   if (service) text += `🛠️ Послуга: ${service}`;
 
   try {
-    await fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        chat_id: CHAT_ID,
-        text,
-        parse_mode: 'HTML'
-      })
+    axios.post(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
+      chat_id: CHAT_ID,
+      text,
+      parse_mode: 'HTML'
     });
 
     res.sendStatus(200);
   } catch (error) {
-    console.error('Помилка надсилання в Telegram:', error);
+    console.error('Помилка надсилання в Telegram:', error.response?.data || error.message);
     res.status(500).json({ error: 'Помилка надсилання в Telegram' });
   }
 });
 
 app.listen(PORT, () => {
-  console.log(`Сервер працює: http://localhost:${PORT}`);
+  console.log(`Сервер працює на порті: http://localhost:${PORT}`);
 });
