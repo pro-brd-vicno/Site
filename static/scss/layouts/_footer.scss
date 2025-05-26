@@ -1,0 +1,178 @@
+.footer {
+    background-color: #f19134;
+    padding: 50px 30px 30px;
+    @media screen and (max-width: $xxl) {
+        padding: 35px 30px 25px;
+    }
+
+    @media screen and (max-width: $xl) {
+        padding: 35px 45px 25px;
+    }
+
+     @media screen and (max-width: $lg) {
+        padding: 35px 20px 25px;
+    }
+
+    @media screen and (max-width: $md) {
+        padding: 30px 10px 25px;
+    }
+
+    @media screen and (max-width: $sm) {
+        padding: 30px 0 15px;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media screen and (max-width: $sm) {
+            flex-direction: column;
+        }
+    }
+
+    &__logo {
+        width: 100px;
+        @media screen and (max-width: $xxl) {
+            width: 90px;
+        }
+        @media screen and (max-width: $lg) {
+            width: 80px;
+        }
+
+        @media screen and (max-width: $sm) {
+            width: 85px;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        gap: 65px;
+        margin-bottom: 0;
+        font-size: 20px;
+        justify-content: space-evenly;
+        padding: 0 0 0 25px;
+        @media screen and (max-width: $xxl) {
+            gap: 30px;
+            font-size: 20px;
+        }
+
+        @media screen and (max-width: $xl) {
+            width: 70%;
+        }
+
+        @media screen and (max-width: $lg) {
+            width: 65%;
+            font-size: 18px;
+            gap: 26px;
+        }
+
+        @media screen and (max-width: $md) {
+            font-size: 16px;
+            gap: 22px;
+        }
+
+        @media screen and (max-width: $sm) {
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-size: 18px;
+            padding-left: 0;
+            margin-bottom: 15px;
+        }
+
+        div {
+            display: flex;
+            gap: 65px;
+            @media screen and (max-width: $xxl) {
+                gap: 30px;
+            }
+
+            @media screen and (max-width: $xl) {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            @media screen and (max-width: $md) {
+                gap: 8px;
+            }
+
+            @media screen and (max-width: $sm) {
+                gap: 12px;
+                text-align: center;
+            }
+        }
+    }
+
+    &__menu-item a {
+        text-decoration: unset;
+        font-weight: 600;
+        color: var(--color-primary-dark);
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        align-items: self-end;
+    }
+
+    &__social-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: fit-content;
+        @media screen and (max-width: $sm) {
+            gap: 4px;
+        }
+
+        div:first-child {
+            gap: 10px !important;
+        }
+
+        svg {
+            @media screen and (max-width: $xxl) {
+                width: 28px;
+                height: 28px;
+            }
+
+             @media screen and (max-width: $xl) {
+                width: 26px;
+                height: 26px;
+            }
+
+            @media screen and (max-width: $md) {
+                width: 24px;
+                height: 24px;
+            }
+
+            @media screen and (max-width: $sm) {
+                width: 26px;
+                height: 26px;
+            }
+        }
+    }
+
+    &__copyright {
+        width: 100%;
+        text-align: center;
+        @media screen and (max-width: $xxl) {
+            font-size: 14px;
+        }
+        
+        @media screen and (max-width: $lg) {
+            font-size: 12px;
+        }
+
+        @media screen and (max-width: $sm) {
+            font-size: 13px;
+        }
+    }
+}

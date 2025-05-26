@@ -1,0 +1,149 @@
+.backdrop {
+    visibility: visible;
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    overflow: auto;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, .55);
+
+    &.is-hidden {
+        display: none;
+    }
+
+    .modal {
+        position: relative;
+        margin: auto;
+        display: block;
+        max-width: 600px;
+        padding: 60px;
+        background-color: #ffffff;
+        height: fit-content;
+        border-radius: 12px;
+        padding-bottom: 40px;
+        @media screen and (max-width: $md) {
+            max-width: 540px;
+        }
+
+        @media screen and (max-width: $sm) {
+            margin: auto 15px;
+            padding: 30px 15px;
+        }
+
+        &__close-button {
+            background-color: rgba(0, 0, 0, 0);
+            position: absolute;
+            right: 1.25rem;
+            top: 1.25rem;
+            border: 1px solid;
+            display: grid;
+            height: 2rem;
+            width: 2rem;
+            place-items: center;
+            border-radius: 50%;
+            fill: #202020;
+            font-size: 600;
+            font-size: 20px;
+            @media screen and (max-width: $sm) {
+                height: 28px;
+                width: 28px;
+                font-size: 17px;
+            }
+        }
+
+        &__title {
+            font-size: 26px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 700;
+            @media screen and (max-width: $sm) {
+                font-size: 22px;
+            }
+        }
+
+        .form {
+            &__all-fields {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                @media screen and (max-width: $sm) {
+                    gap: 15px;
+                }
+            }
+
+            &__field {
+                position: relative;
+                width: 100%;
+                font-weight: 500;
+            }
+
+            &__label {
+                margin-bottom: .5rem;
+                font-size: 18px;
+                line-height: 1.75rem;
+                display: inline-block;
+                @media screen and (max-width: $sm) {
+                    font-size: 16px;
+                }
+
+                .modal-star {
+                    color: #ea3324;
+                }
+            }
+
+            &__input {
+                height: 56px;
+                background-color: #fff;
+                border-radius: 12px;
+                font-size: 16px;
+                line-height: 1.25;
+                border: 1px solid #ccc;
+                padding: .5rem 1rem;
+                font-weight: 500;
+                width: 100%;
+                @media screen and (max-width: $sm) {
+                    height: 45px;
+                    font-size: 14px;
+                }
+
+                &::placeholder {
+                    @media screen and (max-width: $sm) {
+                        font-size: 14px;
+                    }
+                }
+
+                &:focus-visible {
+                    outline: none;
+                }
+            }
+
+            select {
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='%23666' viewBox='0 0 24 24'><path d='M7 10l5 5 5-5z'/></svg>");
+                background-repeat: no-repeat;
+                background-size: 35px;
+                background-position: right center;
+                border: 1px solid #ccc;
+                border-radius: 12px;
+
+                &:focus-visible {
+                    outline: none;
+                }
+            }
+
+            &__button {
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+}

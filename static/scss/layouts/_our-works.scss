@@ -1,0 +1,170 @@
+.our-works {
+    position: relative;
+    &__title {
+        text-align: center;
+        margin-bottom: 60px;
+        @media screen and (max-width: $lg) {
+            margin-bottom: 35px;
+        }
+
+        h2 {
+            font-size: 40px;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin: 0;
+            @media screen and (max-width: $lg) {
+                font-size: 36px;
+            }
+
+            @media screen and (max-width: $md) {
+                font-size: 34px;
+            }
+
+            @media screen and (max-width: $sm) {
+                font-size: 24px;
+            }
+
+            &::after {
+                content: "";
+                display: block;
+                height: 4px;
+                width: 60px;
+                background-color: #f19134;
+                margin: 8px auto 0;
+            }
+        }
+
+        @media screen and (max-width: $md) {
+            text-align: center;
+        }
+
+        @media screen and (max-width: $sm) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__slider {
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        padding: 0 100px;
+        overflow: hidden;
+        @media screen and (max-width: $md) {
+            padding: 0 50px;
+        }
+
+        @media screen and (max-width: $sm) {
+            padding: 0 10px;
+            padding-top: 40px;
+        }
+
+         .slick-slide {
+            padding: 0 10px;
+
+            img {
+                width: 100%;
+                height: 600px;
+                object-fit: cover;
+                border-radius: 12px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+                @media screen and (max-width: $xxl) {
+                    height: 550px;
+                }
+
+                @media screen and (max-width: $lg) {
+                    height: 500px;
+                }
+
+                @media screen and (max-width: $md) {
+                    height: 560px;
+                }
+
+                @media screen and (max-width: $sm) {
+                    height: 470px;
+                }
+            }
+        }
+
+        .slick-prev,
+        .slick-next {
+            font-size: 0;
+            display: block;
+            position: absolute;
+            width: 60px;
+            height: 50px;
+            background: unset;
+            border: unset;
+
+            &::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-color: #f19134;
+                border-radius: 50%;
+            }
+        }
+
+        .slick-prev {
+            top: 50%;
+            left: -65px;
+            @media screen and (max-width: $md) {
+                left: -52px;
+            }
+
+             @media screen and (max-width: $sm) {
+                width: 45px;
+                height: 35px;
+                left: unset;
+                right: 40px;
+                top: -38px;
+            }
+
+            &::before {
+                transform: rotate(180deg);
+                background-image: url('/static/images/arrow-r.svg');
+            }
+        }
+
+        .slick-next {
+            top: 50%;
+            right: -65px;
+            @media screen and (max-width: $md) {
+                right: -52px;
+            }
+
+            @media screen and (max-width: $sm) {
+                width: 45px;
+                height: 35px;
+                right: 5px;
+                top: -38px;
+            }
+
+            &::before {
+                background-image: url('/static/images/arrow-r.svg');
+            }
+        }
+    }
+    .slider-pagination {
+        margin-top: 20px;
+        font-size: 16px;
+        color: #666;
+        position: absolute;
+        bottom: 25px;
+        right: 50%;
+        transform: translateX(50%);
+        @media screen and (max-width: $xxl) {
+            bottom: 20px;
+        }
+
+        @media screen and (max-width: $lg) {
+            bottom: 0;
+        }
+
+        @media screen and (max-width: $sm) {
+            bottom: 5px;
+            font-size: 12px;
+        }
+    }
+}

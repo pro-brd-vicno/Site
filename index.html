@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProVicno - Вікна, Двері, Ролети, Ворота, Жалюзі в м. Бердичів</title>
+    <link rel="stylesheet" href="./static/css/main.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <header class="header">
+        <div class="header__container container">
+            <a href="/" aria-label="Посилання на головну сторінку сайту">
+                <img class="header__logo" src="static/images/logo.png" alt="Логотип сайту">
+            </a>
+            <div class="header__contacts">
+                <span class="geo">
+                    <svg aria-label="Іконка геолокації" height="28" width="28"> 
+                        <use href="/static/images/sprite.svg#icon-geo"></use> 
+                    </svg>
+                    м. Бердичів
+                </span>
+                <span class="instagram"> 
+                    <a href="https://www.instagram.com/provicno/">
+                        <svg aria-label="Іконка інстаграм" height="28" width="28"> 
+                            <use href="/static/images/sprite.svg#icon-instagram"></use> 
+                        </svg>
+                    </a>
+                </span>
+                <span class="telegram"> 
+                    <a href="https://t.me/jullrydyak">
+                        <svg aria-label="Іконка телеграм" height="28" width="28"> 
+                            <use href="/static/images/sprite.svg#icon-telegram"></use> 
+                        </svg>
+                    </a>
+                </span>
+                 <span class="facebook"> 
+                    <a href="https://www.facebook.com/provicno.vicno">
+                        <svg aria-label="Іконка телеграм" height="28" width="28"> 
+                            <use href="/static/images/sprite.svg#icon-facebook"></use> 
+                        </svg>
+                    </a>
+                </span>
+                <span>
+                    <a href="tel:0968338020">
+                    <svg aria-label="Іконка телефону" height="28" width="28"> 
+                        <use href="/static/images/sprite.svg#icon-phone"></use> 
+                    </svg>
+                    <span class="tel">
+                        (096) 833-80-20
+                    </span>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="section hero-section">
+            <div class="container hero-section__container">
+                <h1 class="hero-section__title">Вікна, двері, ролети, ворота та жалюзі в Бердичеві</h1>
+                <p class="hero-section__sub-title">Все в одному місці — швидко, якісно, з гарантією!</p>
+                <button class="hero-section__button cta-button cta-button-js" type="button">Залишити заявку на прорахунок</a>
+            </div>
+        </section>
+        <section class="section product-range" id="range">
+            <div class="container product-range__container">
+                <h2 class="product-range__title">Наш асортимент</h2>
+                <div class="product-range__carousel range-carousel">
+                    <div class="product-range__item first">
+                        <div class="product-range__item-image">
+                            <h3 class="product-range__item-title">Вікна та балкони</h3>
+                            <button class="product-range__item-button" data-target="windows" data-index="0">Детальніше</button>
+                        </div>
+                    </div>
+                    <div class="product-range__item second">
+                        <div class="product-range__item-image">
+                            <h3 class="product-range__item-title">Двері</h3>
+                            <button class="product-range__item-button" data-target="doors" data-index="1">Детальніше</button>
+                        </div>
+                    </div>
+                    <div class="product-range__item third">
+                        <div class="product-range__item-image">
+                            <h3 class="product-range__item-title">Ролети та жалюзі</h3>
+                            <button class="product-range__item-button" data-target="blinds" data-index="2">Детальніше</button>
+                        </div>
+                    </div>
+                    <div class="product-range__item fourth">
+                        <div class="product-range__item-image">
+                            <h3 class="product-range__item-title">Маркізи</h3>
+                            <button class="product-range__item-button" data-target="marquises" data-index="3">Детальніше</button>
+                        </div>
+                    </div>
+                    <div class="product-range__item fifth">
+                        <div class="product-range__item-image">
+                            <h3 class="product-range__item-title">Ворота</h3>
+                            <button class="product-range__item-button" data-target="gate" data-index="4">Детальніше</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-details d-none">
+                    <div class="product-details__inner">
+                        <h3 class="product-details__title"></h3>
+                        <div class="product-details__content"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="promo-block">
+                <div class="promo-block__overlay">
+                    <div class="promo-block__content">
+                    <h2 class="promo-block__title">Отримайте персональний розрахунок вартості</h2>
+                    <button class="promo-block__button cta-button cta-button-js">Замовити зараз</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section why-us" id="whyUS">
+            <div class="container">
+                <h2 class="why-us__title">Чому нас обирають?</h2>
+                <div class="why-us__grid">
+                <div class="why-us__item">
+                    <img src="/static/images/why-us/icon_11.png" alt="Досвід">
+                    <h3>Швидкий монтаж від професіоналів</h3>
+                    <p>Наша команда виконує встановлення швидко, акуратно та з дотриманням усіх стандартів якості.</p>
+                </div>
+                <div class="why-us__item">
+                    <img src="/static/images/why-us/icon_22.png" alt="Персоналізований підхід">
+                    <h3>Індивідуальний підхід</h3>
+                    <p>Уважно слухаємо клієнтів, адаптуємось до потреб і знаходимо оптимальні рішення.</p>
+                </div>
+                <div class="why-us__item">
+                    <img src="/static/images/why-us/icon_33.png" alt="Гарантія якості">
+                    <h3>Гарантія якості</h3>
+                    <p>Ми впевнені у своїй продукції — надаємо офіційну гарантію на всі послуги.</p>
+                </div>
+                <div class="why-us__item">
+                    <img src="/static/images/why-us/icon_44.png" alt="Задоволені клієнти">
+                    <h3>Задоволені клієнти</h3>
+                    <p>Понад 90% нових клієнтів приходять за рекомендацією — і це наш найкращий результат.</p>
+                </div>
+                </div>
+            </div>
+        </section>
+        <section class="section our-works" id="works">
+            <div class="container">
+                <div class="our-works__title">
+                    <h2>НАШІ РОБОТИ</h2>
+                    <div class="slider-pagination"></div>
+                </div>
+            </div>
+            <div class="our-works__slider">
+                <div class="slider">
+                    <div><img src="/static/images/our-works/image_1.jpg" alt="Проєкт 1" /></div>
+                    <div><img src="/static/images/our-works/image_2.jpg" alt="Проєкт 2" /></div>
+                    <div><img src="/static/images/our-works/image_5.jpg" alt="Проєкт 5" /></div>
+                    <div><img src="/static/images/our-works/image_4.jpg" alt="Проєкт 4" /></div>
+                    <div><img src="/static/images/our-works/image_6.jpg" alt="Проєкт 6" /></div>
+                    <div><img src="/static/images/our-works/image_3.jpg" alt="Проєкт 3" /></div>
+                    <div><img src="/static/images/our-works/image_7.jpg" alt="Проєкт 7" /></div>
+                    <div><img src="/static/images/our-works/image_8.jpg" alt="Проєкт 8" /></div>
+                </div>
+            </div>
+        </section>
+        <section class="section measurer-call" id="measurer">
+            <div class="container measurer-call__container">
+                <div class="measurer-call__block">
+                    <img src="/static/images/measurer-call/image_1.jpg" alt="">
+                    <div class="measurer-call__text-block">
+                        <h2 class="measurer-call__title">БЕЗКОШТОВНИЙ ВИКЛИК ЗАМІРНИКА</h2>
+                        <form class="form form-js" novalidate>
+                            <div class="form__all-fields">
+                                <div class="form__field">
+                                    <label class="form__label input-label">Ім'я</label>
+                                    <input class="form__input input-field hero-input-name" name="name" type="text" placeholder="Ім'я">
+                                    <div class="error error-name"></div>
+                                </div>
+                                <div class="form__field">
+                                    <label class="form__label input-label">Контактний телефон</label>
+                                    <input class="form__input input-field hero-input-phone" name="phone" type="tel" placeholder="Контактний телефон">
+                                    <div class="error error-phone"></div>
+                                </div>
+                                <button class="form__button cta-button" type="submit">Залишити заявку</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section testimonials" id="testimonials">
+            <div class="testimonials__block" style="background-image: url('/static/images/testimonial/background.png');">
+                <div class="testimonials__overlay">
+                    <div class="container">
+                        <h2 class="testimonials__title">ВІДГУКИ<span class="accent-dot">:</span></h2>
+                        <div class="testimonials-slider">
+                            <div class="testimonial-card">
+                                <div class="testimonial-header">
+                                    <img src="/static/images/testimonial/avatar_1.jpg" alt="Гофман Віталіна" class="avatar" />
+                                    <a href="https://www.instagram.com/vitalinagofman/">
+                                        <span class="name">Гофман Віталіна</span>
+                                    </a>
+                                </div>
+                                <p class="testimonial-text">Замовляли металопластикові вікна для квартири — все чітко: приїхали, поміряли, встановили за 1 день! В квартирі стало тихіше й тепліше. Дуже задоволені сервісом</p>
+                            </div>
+                            <div class="testimonial-card">
+                                <div class="testimonial-header">
+                                    <img src="/static/images/testimonial/avatar_2.jpg" alt="Наумчук Валера" class="avatar" />
+                                    <a href="https://www.instagram.com/valeriinaumchuk/">
+                                        <span class="name">Наумчук Валера</span>
+                                    </a>
+                                </div>
+                                <p class="testimonial-text">Жалюзі підібрали під колір стін — виглядає шикарно. Нарешті не заважає сонце в монітор! Дякую за терпіння при виборі. Консультанти молодці.</p>
+                            </div>
+                            <div class="testimonial-card">
+                                <div class="testimonial-header">
+                                    <img src="/static/images/testimonial/avatar_3.jpg" alt="Гайдамаченко Євгенія" class="avatar" />
+                                    <a href="https://www.instagram.com/riizhayaya/">
+                                        <span class="name">Гайдамаченко Євгенія</span>
+                                    </a>
+                                </div>
+                                <p class="testimonial-text">Шукали вхідні двері, щоб і стильні, і надійні. Знайшли в ProVicno — підказали, підібрали, встановили. Двері реально класні — і вигляд, і тепло тримають.</p>
+                            </div>
+                            <div class="testimonial-card">
+                                <div class="testimonial-header">
+                                    <img src="/static/images/testimonial/avatar_5.jpg" alt="Гаврілова Юлія" class="avatar" />
+                                    <a href="https://www.instagram.com/yuliagavrilova22/">
+                                        <span class="name">Гаврілова Юлія</span>
+                                    </a>
+                                </div>
+                                <p class="testimonial-text">Шукала ворота, які витримають інтенсивну роботу. Все становили швидко, класно що все автоматизовано. Рекомендую!</p>
+                            </div>
+                            <div class="testimonial-card">
+                                <div class="testimonial-header">
+                                    <img src="/static/images/testimonial/avatar_4.jpg" alt="Дмитро Гайдамаченко" class="avatar" />
+                                    <a href="https://www.instagram.com/dmitry_g_33/">
+                                        <span class="name">Дмитро Гайдамаченко</span>
+                                    </a>
+                                </div>
+                                <p class="testimonial-text">Маркіза працює без нарікань. Все зробили в строк. Автоматичне управління це кайф.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section contacts" id="contacts">
+            <h2 class="contacts__title">КОНТАКТНА ІНФОРМАЦІЯ</h2>
+            <div class="container contacts__container">
+                <div class="contacts__map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d321.2787816455773!2d28.580631061179947!3d49.89448037419898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472cf97b8c6c24f1%3A0x9eb5b23c07c97d10!2z0LLRg9C70LjRhtGPINCE0LLRgNC-0L_QtdC50YHRjNC60LAsIDEsINCR0LXRgNC00LjRh9GW0LIsINCW0LjRgtC-0LzQuNGA0YHRjNC60LAg0L7QsdC70LDRgdGC0YwsIDEzMzAw!5e0!3m2!1suk!2sua!4v1747488035671!5m2!1suk!2sua" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="info-container">
+                    <div class="info-container__block">
+                        <div class="info-container__address">
+                            <div class="title">Адреса офісу:</div>
+                            м. Бердичів,</br> вул. Європейська 1
+                        </div>
+                        <div class="info-container__phones">
+                            <div class="title">Контакти:</div>
+                            <p class="mb-0">
+                                <a href="tel:0968338020">(096) 833-80-20</a>
+                                <br>
+                                <a href="tel:0933717472">(093) 371-74-72</a>
+                            </p>
+                        </div>
+                        <div class="info-container__social-media">
+                            <div class="title">Coціальні мережі:</div>
+                            <div class="d-flex justify-content-center gap-2 gap-lg-3 mt-1">
+                                <a href="https://www.instagram.com/provicno/">
+                                    <svg aria-label="Іконка інстаграм" height="28" width="28"> 
+                                        <use href="/static/images/sprite.svg#icon-instagram"></use> 
+                                    </svg>
+                                </a>
+                                <a href="https://t.me/jullrydyak">
+                                    <svg aria-label="Іконка телеграм" height="28" width="28"> 
+                                        <use href="/static/images/sprite.svg#icon-telegram"></use> 
+                                    </svg>
+                                </a>
+                                <a href="https://www.facebook.com/provicno.vicno">
+                                    <svg aria-label="Іконка телеграм" height="28" width="28"> 
+                                        <use href="/static/images/sprite.svg#icon-facebook"></use> 
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="info-container__time-work">
+                            <div class="title">Графік роботи:</div>
+                            <p class="mb-1">Пн–Пт: 9:00 – 18:00</p>
+                            <p class="mb-0">Cб–Нд: 10:00 – 17:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section faq" id="faq">
+            <div class="container">
+                <h2 class="faq__title">Поширені запитання та відповіді</h2>
+                <div class="faq__list">
+                    <div class="faq__item">
+                        <h3 class="faq__question">⏱️ Скільки часу займає встановлення вікон, дверей чи воріт?</h3>
+                        <span class="faq__answer">
+                            <p>Монтаж стандартного вікна — 1–2 години.</p>
+                            <p>Балкон під ключ — орієнтовно 1 день.</p>
+                            <p>Вхідні двері — 2–3 години, міжкімнатні — близько години.</p>
+                            <p>Гаражні ворота — до 4 годин.</p>
+                            <p>Ми завжди узгоджуємо терміни індивідуально.</p>
+                        </span>
+                    </div>
+                    <div class="faq__item">
+                        <h3 class="faq__question">Які вікна краще обрати — двокамерні чи трикамерні?</h3>
+                        <span class="faq__answer">
+                            <p>Для кращої теплоізоляції рекомендуємо трикамерні склопакети.</p>
+                            <p>Для стандартних квартир з помірним рівнем шуму — підійдуть і двокамерні.</p>
+                            <p>Ми допомагаємо обрати оптимальний варіант під ваші умови.</p>
+                        </span>
+                    </div>
+                    <div class="faq__item">
+                        <h3 class="faq__question">❄️ Чи можна встановлювати вікна або двері взимку?</h3>
+                        <p class="faq__answer">
+                            Так, монтаж можливий у будь-яку пору року. Ми використовуємо морозостійкі монтажні матеріали, які гарантують герметичність та надійність навіть у холодну пору.</p>
+                    </div>
+                    <div class="faq__item">
+                        <h3 class="faq__question">🛠 Чи входить демонтаж старих конструкцій у вартість?</h3>
+                        <p class="faq__answer">Так, ми самі виконуємо демонтаж старих вікон, дверей або воріт. Це вже включено у вартість послуги — вам не потрібно шукати інших майстрів.</p>
+                    </div>
+                    <div class="faq__item">
+                        <h3 class="faq__question">Яка гарантія на вироби та монтаж?</h3>
+                        <span class="faq__answer">
+                            <p>✔️ Гарантія на продукцію — від 5 до 10 років (залежно від бренду).</p>
+                            <p>✔️ Гарантія на монтаж — 1 рік.</p>
+                            </p>У разі проблем — ми оперативно реагуємо та усуваємо недоліки.</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__left">
+                <a href="/" aria-label="Посилання на головну сторінку сайту">
+                    <img class="footer__logo" src="static/images/logo.png" alt="Логотип сайту">
+                </a>
+            </div>
+            <ul class="footer__menu">
+                <div>
+                    <li class="footer__menu-item">
+                        <a class="scroll-link" href="#range">Асортимент</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a class="scroll-link" href="#whyUS">Чому ми?</a>
+                    </li>
+                </div>
+                <div>
+                    <li class="footer__menu-item">
+                        <a class="scroll-link" href="#works">Роботи</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a class="scroll-link" href="#testimonials">Відгуки</a>
+                    </li>
+                </div>
+                <div>
+                    <li class="footer__menu-item">
+                        <a class="scroll-link" href="#contacts">Контакти</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a class="scroll-link" href="#faq">Запитання</a>
+                    </li>
+                </div>
+            </ul>
+            <div class="footer__right">
+                <div class="footer__social-block">
+                    <div class="d-flex justify-content-center gap-3 mt-1">
+                        <a href="https://www.instagram.com/provicno/">
+                            <svg aria-label="Іконка інстаграм" height="32" width="32"> 
+                                <use href="/static/images/sprite.svg#icon-instagram"></use> 
+                            </svg>
+                        </a>
+                        <a href="https://t.me/jullrydyak">
+                            <svg aria-label="Іконка телеграм" height="32" width="32"> 
+                                <use href="/static/images/sprite.svg#icon-telegram"></use> 
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/provicno.vicno">
+                            <svg aria-label="Іконка телеграм" height="32" width="32"> 
+                                <use href="/static/images/sprite.svg#icon-facebook"></use> 
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="footer__copyright">2025 © All Rights Reserved</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a href="tel:0968338020" class="call-button" aria-label="Подзвонити">
+        <div class="pulse-ring"></div>
+        <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="#ffffff">
+                <path d="M0 0h24v24H0z" fill="none"/>
+                <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21 11.72 11.72 0 003.61.58 1 1 0 011 1V20a1 1 0 01-1 1C7.61 21 3 16.39 3 10a1 1 0 011-1h3.5a1 1 0 011 1c0 1.28.2 2.53.62 3.79z"/>
+            </svg>
+        </div>
+    </a>
+    <div class="backdrop is-hidden">
+        <div class="modal">
+            <button class="modal__close-button" type="button" aria-label="кнопка закриття модального вікна">✕</button>
+            <h2 class="modal__title">Заявка</h2>
+            <form class="form form-js" novalidate>
+                <div class="form__all-fields">
+                    <div class="form__field">
+                        <label class="form__label input-label">Ім'я<span class="modal-star">*</span></label>
+                        <input class="form__input input-field hero-input-name" id="heroName" name="name" type="text" placeholder="Ім'я">
+                        <div class="error error-name"></div>
+                    </div>
+                    <div class="form__field">
+                        <label class="form__label input-label">Контактний телефон<span class="modal-star">*</span></label>
+                        <input class="form__input input-field hero-input-phone" id="heroPhone" name="phone" type="tel" placeholder="Контактний телефон">
+                        <div class="error error-phone"></div>
+                    </div>
+                    <div class="form__field">
+                        <label class="form__label input-label">Оберіть послугу:</label>
+                        <select class="form__input" id="formSelect" name="formSelect">
+                            <option value="" disabled selected>Оберіть варіант</option>
+                            <option value="Вікна та балкони">Вікна та балкони</option>
+                            <option value="Двері">Двері</option>
+                            <option value="Ролети та жалюзі">Ролети та жалюзі</option>
+                            <option value="Маркізи">Маркізи</option>
+                            <option value="Ворота">Ворота</option>
+                        </select>
+                        <div class="error error-service"></div>
+                    </div>
+                    <button class="form__button cta-button" type="submit">Залишити заявку</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="./static/js/app.js"></script>
+    <script src="./static/js/product-range.js"></script>
+</body>
+</html>

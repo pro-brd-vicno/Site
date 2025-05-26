@@ -1,0 +1,93 @@
+.cta-button {
+    background-color: #f19134;
+    color: #fff;
+    padding: 20px 35px;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.18s ease;
+    letter-spacing: 1.5px;
+    @media screen and (max-width: $xl) {
+        padding: 20px;
+        font-size: 18px;
+    }
+
+    @media screen and (max-width: $lg) {
+        padding: 16px;
+        font-size: 16px;
+    }
+
+    @media screen and (max-width: $sm) {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    &:hover {
+        background-color: #e58334;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+        transform: scale(1.05);
+    }
+}
+
+.call-button {
+  position: fixed;
+  bottom: 110px;
+  right: 30px;
+  width: 80px;
+  height: 80px;
+  background-color: #29c1d9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  z-index: 9999;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  @media screen and (max-width: $lg) {
+    width: 70px;
+    height: 70px;
+    bottom: 30px;
+    right: 20px;
+  }
+
+   @media screen and (max-width: $sm) {
+    width: 65px;
+    height: 65px;
+    right: 25px;
+    bottom: 60px;
+   }
+}
+
+.call-button .icon svg {
+    width: 54px;
+    height: 54px;
+    padding-bottom: 8px;
+}
+
+.call-button .pulse-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(41, 193, 217, 0.3);
+  border-radius: 50%;
+  animation: pulse-animation 1.5s infinite;
+  z-index: -1;
+}
+
+@keyframes pulse-animation {
+  0% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  70% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}

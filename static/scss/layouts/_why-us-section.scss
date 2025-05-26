@@ -1,0 +1,114 @@
+.why-us {
+    padding: 60px 0;
+    position: relative;
+
+    &__title {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 40px;
+        font-weight: 600;
+        margin: 0 auto 60px;
+        color: var(--color-primary-dark);
+        position: relative;
+        width: fit-content;
+        @media screen and (max-width: $lg) {
+            font-size: 36px;
+            margin-bottom: 35px;
+        }
+
+        @media screen and (max-width: $md) {
+            font-size: 34px;
+        }
+
+        @media screen and (max-width: $sm) {
+            font-size: 24px;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            width: 28px;
+            height: 4.5px;
+            background: #f19134;
+            position: absolute;
+            bottom: -3px;
+            left: 0px;
+            transform: skew(40deg);
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            width: 28px;
+            height: 4.5px;
+            background: #f19134;
+            position: absolute;
+            bottom: -3px;
+            right: 0px;
+            -webkit-transform: skew(40deg);
+            transform: skew(40deg);
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 25px;
+    }
+
+    &__item {
+        background-color: #ffffff;
+        border-radius: 16px;
+        padding: 20px;
+        text-align: center;
+        border: 1px solid #e5e7eb;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 10px 24px rgba(0, 0, 0, 0.09);
+          border-color: #d1d5db;
+        }
+
+        img {
+          width: 66px;
+          height: 66px;
+          margin: 0 auto 20px;
+          @media screen and (max-width: $sm) {
+              width: 54px;
+              height: 54px;
+              margin: 0 auto 10px;
+          }
+        }
+
+        h3 {
+          font-size: 20px;
+          font-weight: 700;
+          color: var(--color-primary-dark);
+          margin-bottom: 12px;
+          @media screen and (max-width: $sm) {
+              font-size: 18px;
+          }
+        }
+
+        p {
+          font-size: 16px;
+          color: #4b5563;
+          line-height: 1.5;
+          @media screen and (max-width: $sm) {
+              font-size: 14px;
+              margin-bottom: 0;
+          }
+        }
+
+        &:last-child {
+            img {
+                width: 77px;
+                @media screen and (max-width: $sm) {
+                    width: 67px;
+                }
+            }
+        }
+    }
+}
