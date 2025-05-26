@@ -139,7 +139,7 @@
         }
 
         @media screen and (max-width: $sm) {
-            min-height: 450px !important;
+            min-height: 370px !important;
             background-size: cover;
         }
 
@@ -212,7 +212,7 @@
     }
 
     &__item-title {
-        font-size: 22px;
+        font-size: 24px;
         font-weight: 700;
         color: #fff;
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
@@ -220,16 +220,12 @@
         @media screen and (max-width: $md) {
             font-size: 20px;
         }
-
-        @media screen and (max-width: $sm) {
-            font-size: 18px;
-        }
     }
 
     &__item-button {
         width: 80%;
         padding: 10px 20px;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 600;
         color: white;
         background-color: #f19134;
@@ -240,7 +236,7 @@
         box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         @media screen and (max-width: $sm) {
             padding: 8px;
-            font-size: 12px;
+            font-size: 14px;
         }
 
         &:hover {
