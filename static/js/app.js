@@ -106,12 +106,10 @@ $(document).ready(function () {
 
     $('.slick-cloned *').attr('tabindex', '-1');
 
-    const form = $(".form-js");
+    const forms = $(".form-js");
 
 
-    $(".form-js").each(function () {
-    const form = $(this);
-
+    forms.each(function (form) {
     form.on("submit", async function (e) {
       e.preventDefault();
 
@@ -181,6 +179,9 @@ $(document).ready(function () {
           if (response.ok) {
             alert("✅ Заявка надіслана!");
             form[0].reset();
+            if (!backdrop.classList.contains("is-hidden")) {
+                backdrop.classList.add("is-hidden");
+            }
           } else {
             alert("Ваші дані не вдалося зберегти");
             const telegramLink = `https://t.me/jullrydyak`;
