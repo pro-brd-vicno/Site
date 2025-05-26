@@ -109,7 +109,9 @@ $(document).ready(function () {
     const forms = $(".form-js");
 
 
-    forms.each(function (form) {
+    forms.each(function () {
+    const form = $(this);
+        
     form.on("submit", async function (e) {
       e.preventDefault();
 
