@@ -180,7 +180,7 @@ $(document).ready(function () {
 
           if (response.ok) {
             alert("✅ Заявка надіслана!");
-            form.reset();
+            form[0].reset();
           } else {
             alert("Ваші дані не вдалося зберегти");
             const telegramLink = `https://t.me/jullrydyak`;
