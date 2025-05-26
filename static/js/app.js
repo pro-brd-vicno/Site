@@ -181,8 +181,9 @@ $(document).ready(function () {
           if (response.ok) {
             alert("✅ Заявка надіслана!");
             form[0].reset();
-            if (!backdrop.classList.contains("is-hidden")) {
-                backdrop.classList.add("is-hidden");
+            const backdrop = $(".backdrop");
+            if (!backdrop.hasClass("is-hidden")) {
+                backdrop.addClass("is-hidden");
             }
           } else {
             alert("Ваші дані не вдалося зберегти");
