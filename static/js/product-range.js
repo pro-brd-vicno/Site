@@ -100,13 +100,11 @@ const detailsData = {
 };
 
 let isFirstOpen = true;
+let currentOpenIndex = null;
 
 document.querySelectorAll('.product-range__item-button').forEach((button) => {
   button.addEventListener('click', (e) => {
-    // Перевіряємо, чи кнопка знаходиться в .slick-cloned
-    if (button.closest('.slick-cloned')) {
-      return; // Нічого не робимо — це клон
-    }
+    if (button.closest('.slick-cloned')) return;
 
     const detailsBlock = document.querySelector('.product-details');
     const titleEl = detailsBlock.querySelector('.product-details__title');
@@ -115,19 +113,30 @@ document.querySelectorAll('.product-range__item-button').forEach((button) => {
     const index = +button.getAttribute('data-index');
     if (!detailsData[index]) return;
 
-    if (isFirstOpen) {
-      detailsBlock.classList.remove('d-none');
-      isFirstOpen = false;
+    // Якщо натиснута та сама кнопка — ховаємо блок
+    if (currentOpenIndex === index && !isFirstOpen) {
+      detailsBlock.classList.add('d-none');
+      currentOpenIndex = null;
+      isFirstOpen = true;
+      return;
     }
 
+    // Приховуємо контент одразу
     contentEl.classList.add('product-details__content--hidden');
+    detailsBlock.classList.add('d-none'); // повністю ховаємо блок
 
     setTimeout(() => {
+      // Оновлюємо вміст
       titleEl.innerHTML = detailsData[index].title;
       contentEl.innerHTML = detailsData[index].content;
-      contentEl.classList.remove('product-details__content--hidden');
-    }, 300);
 
-    detailsBlock.scrollIntoView({ behavior: 'smooth' });
+      // Показуємо блок
+      detailsBlock.classList.remove('d-none');
+      contentEl.classList.remove('product-details__content--hidden');
+      isFirstOpen = false;
+      currentOpenIndex = index;
+
+      detailsBlock.scrollIntoView({ behavior: 'smooth' });
+    }, 200); // трошки часу, щоб блок точно сховався
   });
 });

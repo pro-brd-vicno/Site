@@ -122,21 +122,17 @@ $(document).ready(function () {
       const serviceInput = form.find("select[name='formSelect']");
       const service = serviceInput.length ? serviceInput.val() : null;
 
-      // Очистка попередніх помилок
       form.find(".error").text("");
       form.find("input").removeClass("error");
 
-      // Валідація імені
       if (name === "") {
         form.find(".error-name").text("Ім’я обовʼязкове");
         form.find("input[name='name']").addClass("error");
         isValid = false;
       }
 
-      // Валідація телефону
-      const phoneDigits = phone.replace(/[^\d]/g, ""); // залишає тільки цифри
+      const phoneDigits = phone.replace(/[^\d]/g, ""); 
 
-    // Український номер: 380XXXXXXXXX або 0XXXXXXXXX (9 цифр після коду)
       const isValidUA = /^(\+?38)?0\d{9}$/.test(phoneDigits);
 
       if (!isValidUA) {
@@ -199,5 +195,32 @@ $(document).ready(function () {
       }
     });
   });
+
+  $(".form input").on("input", function () {
+        const $input = $(this);
+        const value = $input.val().trim();
+        const name = $input.attr("name");
+      
+        if (name === "name" && value !== "") {
+          $input.removeClass("error");
+          $(".error-name").text("");
+        }
+      
+        if (name === "phone" && value !== "") {
+          $input.removeClass("error");
+          $(".error-phone").text("");
+        }
+    });
+
+    $(".form select").on("change", function () {
+        const $select = $(this);
+        const name = $select.attr("name");
+        const value = $select.val();
+
+        if (name === "formSelect" && value !== "") {
+            $select.removeClass("error");
+            $(".error-service").text("");
+        }
+    });
 });
 
